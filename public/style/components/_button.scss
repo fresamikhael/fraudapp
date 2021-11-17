@@ -1,0 +1,56 @@
+.fraudButton {
+  margin: 0;
+
+  .buttonBiru {
+    border: solid 1px #eceff5;
+    background: #0d2b70;
+    padding: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: justify;
+    line-height: 55px;
+    color: white;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .buttonMerah {
+    border: solid 1px #eceff5;
+    background: red;
+    padding: 15px;
+    margin-top: 4px;
+    margin-left: 10px;
+    text-align: center;
+    line-height: 55px;
+    color: white;
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+
+  .buttonAbu {
+    border: solid 1px #eceff5;
+    background: grey;
+    padding: 15px;
+    margin-top: -34px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 55px;
+    color: white;
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+
+  .cardSearch {
+    border: solid 1px #eceff5;
+    background: rgb(245, 56, 56);
+    padding: 15px;
+    margin-top: -30px;
+    margin-left: 10px;
+    text-align: justify;
+    line-height: 23px;
+    color: white;
+    font-size: 20px;
+  }
+}
