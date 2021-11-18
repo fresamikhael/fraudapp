@@ -329,7 +329,7 @@
                 </select>
             </div>
             <div class="col-sm-6 my-2">
-                <input type="text" class="form-control" name="" placeholder="Reason if Rejected"/>
+                <input type="text" class="form-control" name="reason_keterangan_saksi" placeholder="Reason if Rejected"/>
             </div>
             <div class="col-sm-4 my-2">
                 <select name="status_bukti_dokumen_surat" id="" class="form-control">
@@ -338,7 +338,7 @@
                 </select>
             </div>
             <div class="col-sm-6 my-2">
-                <input type="text" class="form-control" name="" placeholder="Reason if Rejected"/>
+                <input type="text" class="form-control" name="reason_bukti_dokumen_surat" placeholder="Reason if Rejected"/>
             </div>
             <div class="col-sm-4 my-2">
                 <select name="status_keterangan_pelaku" id="" class="form-control">
@@ -347,7 +347,7 @@
                 </select>
             </div>
             <div class="col-sm-6 my-2">
-                <input type="text" class="form-control" name="" placeholder="Reason if Rejected"/>
+                <input type="text" class="form-control" name="reason_keterangan_pelaku" placeholder="Reason if Rejected"/>
             </div>
             <div class="col-sm-4 my-2">
                 <select name="status_lain_lain" id="" class="form-control">
@@ -356,7 +356,7 @@
                 </select>
             </div>
             <div class="col-sm-6 my-2">
-                <input type="text" class="form-control" name="" placeholder="Reason if Rejected"/>
+                <input type="text" class="form-control" name="reason_lain_lain" placeholder="Reason if Rejected"/>
             </div>
         </div>
         </div>
@@ -401,7 +401,7 @@
                     </select>
                 </div>
                 <div class="col-sm-6 my-2">
-                    <input type="text" class="form-control" name="" placeholder="Reason if Rejected"/>
+                    <input type="text" class="form-control" name="reason_barang_bukti" placeholder="Reason if Rejected"/>
                 </div>
                 <div class="col-sm-4 my-2">
                     <select name="status_dokumentasi_investigasi" id="" class="form-control">
@@ -410,7 +410,7 @@
                     </select>
                 </div>
                 <div class="col-sm-6 my-2">
-                    <input type="text" class="form-control" name="" placeholder="Reason if Rejected"/>
+                    <input type="text" class="form-control" name="reason_kelengkapan_dokumen" placeholder="Reason if Rejected"/>
                 </div>
                  <div class="col-sm-4 my-2">
                     <select name="status_kronologis_lengkap" id="" class="form-control">
@@ -419,7 +419,7 @@
                     </select>
                 </div>
                 <div class="col-sm-6 my-2">
-                    <input type="text" class="form-control" name="" placeholder="Reason if Rejected"/>
+                    <input type="text" class="form-control" name="reason_kronologis_lengkap" placeholder="Reason if Rejected"/>
                 </div>
                 
             </div>

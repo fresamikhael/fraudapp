@@ -15,4 +15,8 @@ class StatusFraudApprovalModel extends Model
     public function status(){
         return $this->belongsTo(FraudModel::class,'no_kasus','no_kasus');
     }
+
+    public function reason(){
+        return $this->hasOne(ReasonRejectModel::class,'no_kasus','no_kasus');
+    }
 }

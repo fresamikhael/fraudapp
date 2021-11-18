@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\FraudModel;
+use App\Models\ReasonRejectModel;
 use App\Models\StatusFraudApprovalModel;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -115,11 +116,30 @@ class FraudController extends Controller
      public function return(Request $request,$no_kasus)
     {
    
+    $data = $request->all();
+    $approval = $request->except(['_token','reason_keterangan_saksi','reason_bukti_dokumen_surat','reason_keterangan_pelaku',
+    'reason_lain_lain','reason_barang_bukti','reason_kelengkapan_dokumen','reason_kronologis_lengkap']);
+    $reason = [
+    'no_kasus'=> $no_kasus,    
+    'reason_keterangan_saksi'=>$data['reason_keterangan_saksi'],
+    'reason_bukti_dokumen_surat'=>$data['reason_bukti_dokumen_surat'],
+    'reason_keterangan_pelaku'=>$data['reason_keterangan_pelaku'],
+    'reason_lain_lain'=>$data['reason_lain_lain'],
+    'reason_barang_bukti'=>$data['reason_barang_bukti'],
+    'reason_kelengkapan_dokumen'=>$data['reason_kelengkapan_dokumen'],
+    'reason_kronologis_lengkap'=>$data['reason_kronologis_lengkap']];
 
-    $data = $request->except(['_token']);
+   
     $status=  StatusFraudApprovalModel::where('no_kasus',$no_kasus);
-    $status->update($data);
-
+    $status->update($approval);
+    ReasonRejectModel::create(['no_kasus'=> $no_kasus,    
+    'reason_keterangan_saksi'=>$data['reason_keterangan_saksi'],
+    'reason_bukti_dokumen_surat'=>$data['reason_bukti_dokumen_surat'],
+    'reason_keterangan_pelaku'=>$data['reason_keterangan_pelaku'],
+    'reason_lain_lain'=>$data['reason_lain_lain'],
+    'reason_barang_bukti'=>$data['reason_barang_bukti'],
+    'reason_kelengkapan_dokumen'=>$data['reason_kelengkapan_dokumen'],
+    'reason_kronologis_lengkap'=>$data['reason_kronologis_lengkap']]);
     return('Update berhasil');
     
     }
