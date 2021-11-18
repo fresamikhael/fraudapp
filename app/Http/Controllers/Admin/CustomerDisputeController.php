@@ -75,7 +75,7 @@ class CustomerDisputeController extends Controller
     {
         $data = CustomerDisputeModel::with('user')->where('no_kasus',$id)->firstOrFail();
 
-        return $data;
+        return view('admin.customer_dispute',['data'=>$data]);
     }
 
     /**
