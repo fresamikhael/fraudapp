@@ -224,42 +224,42 @@
                     </select>
                 </div>
                 <div class="col-sm-12 my-2">
-                    <select name="status_nama_pihak" id="" class="form-control">
+                    <select name="status_jenis_kasus" id="" class="form-control">
                         <option value="APPROVE">APPROVE</option>
                         <option value="REJECT">REJECT</option>
                     </select>                </div>
                 <div class="col-sm-12 my-2">
-                    <select name="status_unit" id="" class="form-control">
+                    <select name="status_faktor_penyebab" id="" class="form-control">
                         <option value="APPROVE">APPROVE</option>
                         <option value="REJECT">REJECT</option>
                     </select>
                 </div>
                 <div class="col-sm-12 my-2">
-                    <select name="status_no_dokumen" id="" class="form-control">
+                    <select name="status_pelaku" id="" class="form-control">
                         <option value="APPROVE">APPROVE</option>
                         <option value="REJECT">REJECT</option>
                     </select>
                 </div>
                 <div class="col-sm-12 my-2">
-                    <select name="status_nilai_kerugian" id="" class="form-control">
+                    <select name="status_departemen" id="" class="form-control">
                         <option value="APPROVE">APPROVE</option>
                         <option value="REJECT">REJECT</option>
                     </select>
                 </div>
                   <div class="col-sm-12 my-2">
-                    <select name="status_nilai_kerugian" id="" class="form-control">
+                    <select name="status_total_kerugian" id="" class="form-control">
                         <option value="APPROVE">APPROVE</option>
                         <option value="REJECT">REJECT</option>
                     </select>
                 </div>
                   <div class="col-sm-12 my-2">
-                    <select name="status_nilai_kerugian" id="" class="form-control">
+                    <select name="status_tanggal_Kejadian" id="" class="form-control">
                         <option value="APPROVE">APPROVE</option>
                         <option value="REJECT">REJECT</option>
                     </select>
                 </div>
                   <div class="col-sm-12 my-2">
-                    <select name="status_nilai_kerugian" id="" class="form-control">
+                    <select name="status_tempat_kejadian" id="" class="form-control">
                         <option value="APPROVE">APPROVE</option>
                         <option value="REJECT">REJECT</option>
                     </select>
@@ -323,7 +323,7 @@
         <div class="col-lg-4">
         <div class="mb-3 row">
             <div class="col-sm-4 my-2">
-                <select name="status_dokumen" id="" class="form-control">
+                <select name="status_keterangan_saksi" id="" class="form-control">
                     <option value="APPROVE">APPROVE</option>
                     <option value="REJECT">REJECT</option>
                 </select>
@@ -332,13 +332,13 @@
                 <input type="text" class="form-control" name="alasan_dokumen" placeholder="Reason if Rejected"/>
             </div>
             <div class="col-sm-4 my-2">
-                <select name="status_bukti_1" id="" class="form-control">
+                <select name="status_bukti_dokumen_surat" id="" class="form-control">
                     <option value="APPROVE">APPROVE</option>
                     <option value="REJECT">REJECT</option>
                 </select>
             </div>
             <div class="col-sm-6 my-2">
-                <input type="text" class="form-control" name="alasan_bukti_1" placeholder="Reason if Rejected"/>
+                <input type="text" class="form-control" name="status_keterangan_pelaku" placeholder="Reason if Rejected"/>
             </div>
             <div class="col-sm-4 my-2">
                 <select name="status_bukti_2" id="" class="form-control">
@@ -350,7 +350,7 @@
                 <input type="text" class="form-control" name="alasan_bukti_2" placeholder="Reason if Rejected"/>
             </div>
             <div class="col-sm-4 my-2">
-                <select name="status_bukti_3" id="" class="form-control">
+                <select name="status_lain_lain" id="" class="form-control">
                     <option value="APPROVE">APPROVE</option>
                     <option value="REJECT">REJECT</option>
                 </select>
@@ -395,7 +395,7 @@
             <div class="col-lg-6">
             <div class="mb-3 row">
                 <div class="col-sm-4 my-2">
-                    <select name="status_disposisi" id="" class="form-control">
+                    <select name="status_dokumentasi_barang_bukti" id="" class="form-control">
                         <option APPROVE">APPROVE</option>
                         <option value="REJECT">REJECT</option>
                     </select>
@@ -404,7 +404,7 @@
                     <input type="text" class="form-control" name="alasan_disposisi" placeholder="Reason if Rejected"/>
                 </div>
                 <div class="col-sm-4 my-2">
-                    <select name="status_dokumen_lainnya" id="" class="form-control">
+                    <select name="status_dokumentasi_investigasi" id="" class="form-control">
                         <option value="APPROVE">APPROVE</option>
                         <option value="REJECT">REJECT</option>
                     </select>
@@ -413,7 +413,7 @@
                     <input type="text" class="form-control" name="alasan_dokumen_lainnya" placeholder="Reason if Rejected"/>
                 </div>
                  <div class="col-sm-4 my-2">
-                    <select name="status_dokumen_lainnya" id="" class="form-control">
+                    <select name="status_kronologis_lengkap" id="" class="form-control">
                         <option value="APPROVE">APPROVE</option>
                         <option value="REJECT">REJECT</option>
                     </select>
