@@ -46,7 +46,7 @@ class FraudController extends Controller
 
         }
 
-        return view('admin.fraud_table');
+        return view('admin.fraud.fraud_table');
         // return User::with('fraud')->get();
 
     }
@@ -82,7 +82,7 @@ class FraudController extends Controller
     {
         $data = FraudModel::with('user')->where('no_kasus',$id)->firstOrFail();
 
-        return view('admin.approval_fraud',['data'=>$data]);
+        return view('admin.fraud.approval_fraud',['data'=>$data]);
 
 
     }
