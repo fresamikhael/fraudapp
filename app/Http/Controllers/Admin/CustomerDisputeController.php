@@ -41,7 +41,7 @@ class CustomerDisputeController extends Controller
                 
         }
 
-        return view('admin.customer_dispute');
+        return view('admin.customer_dispute.customer_dispute');
     }
 
     /**
@@ -75,7 +75,7 @@ class CustomerDisputeController extends Controller
     {
         $data = CustomerDisputeModel::with('user')->where('no_kasus',$id)->firstOrFail();
 
-        return view('admin.customer_dispute',['data'=>$data]);
+        return $data;
     }
 
     /**
