@@ -39,6 +39,6 @@ class FraudModel extends Model
     }
 
      public function status(){
-        return $this->hasOne(StatusFraudApprovalModel::class,'status_no_kasus','no_kasus');
+        return $this->hasOne(StatusFraudApprovalModel::class,'no_kasus','no_kasus');
     }
 }

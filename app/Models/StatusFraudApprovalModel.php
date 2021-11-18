@@ -13,6 +13,6 @@ class StatusFraudApprovalModel extends Model
     protected $guarded = [];
 
     public function status(){
-        return $this->belongsTo(FraudModel::class,'status_no_kasus','no_kasus');
+        return $this->belongsTo(FraudModel::class,'no_kasus','no_kasus');
     }
 }
