@@ -142,6 +142,16 @@
       </div>
     </div>
 
+
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
     <form action="/admin/dashboard/fraud/approval/{{ $data->no_kasus }}" method="POST" enctype="multipart/form-data">
       @csrf
       <div class="container">
@@ -396,7 +406,7 @@
             <div class="mb-3 row">
                 <div class="col-sm-4 my-2">
                     <select name="status_dokumentasi_barang_bukti" id="" class="form-control">
-                        <option APPROVE">APPROVE</option>
+                        <option value= "APPROVE">APPROVE</option>
                         <option value="REJECT">REJECT</option>
                     </select>
                 </div>
@@ -446,8 +456,12 @@
         <div class="d-flex justify-content-end mb-5">
             <div class="col-lg-3">
             
-                <button class="btn btn-danger" type="submit">Return</button>
-                <button class="btn btn-primary">Process</button>
+                <button class="btn btn-danger" name='action' value='return' type="submit">Return</button>
+              
+
+                    <button class="btn btn-primary" name='action' value='approve'>Process</button>
+              
+               
             </div>
         </div>
         </div>
