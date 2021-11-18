@@ -142,7 +142,7 @@
       </div>
     </div>
 
-    <form action="/litigation/fraud" method="POST" enctype="multipart/form-data">
+    <form action="/admin/dashboard/fraud/approval/{{ $data->no_kasus }}" method="POST" enctype="multipart/form-data">
       @csrf
       <div class="container">
         <div class="row">
@@ -167,13 +167,13 @@
             >Jenis Kasus</label
             >
             <div class="col-sm-6 my-2">
-            <input type="text" class="form-control" name="nama_pihak" value="{{ $data->jenis_kasus }}" readonly />
+            <input type="text" class="form-control" name="" value="{{ $data->jenis_kasus }}" readonly />
             </div>
             <label class="col-sm-6 col-form-label my-2"
             >Faktor Penyebab</label
             >
             <div class="col-sm-6 my-2">
-            <input type="text" class="form-control" name="unit" value="{{ $data->faktor_penyebab }}" readonly />
+            <input type="text" class="form-control" name="" value="{{ $data->faktor_penyebab }}" readonly />
             </div>
         </div>
         <div class="row">
@@ -181,31 +181,31 @@
             >Pelaku</label
             >
             <div class="col-sm-6 my-2">
-            <input type="text" class="form-control" name="nilai_kerugian" value="{{ $data->pelaku }}" readonly />
+            <input type="text" class="form-control" name="" value="{{ $data->pelaku }}" readonly />
             </div>
             <label class="col-sm-6 col-form-label my-2"
             >Unit/Departemen/Divisi</label
             >
             <div class="col-sm-6 my-2">
-            <input type="text" class="form-control" name="no_dokumen" value="{{ $data->departemen }}" readonly />
+            <input type="text" class="form-control" name="" value="{{ $data->departemen }}" readonly />
             </div>
             <label class="col-sm-6 col-form-label my-2"
             >Total Kerugian</label
             >
             <div class="col-sm-6 my-2">
-            <input type="text" class="form-control" name="no_dokumen" value="{{ $data->total_kerugian }}" readonly />
+            <input type="text" class="form-control" name="" value="{{ $data->total_kerugian }}" readonly />
             </div>
             <label class="col-sm-6 col-form-label my-2"
             >Tanggal Kejadian</label
             >
             <div class="col-sm-6 my-2">
-            <input type="text" class="form-control" name="no_dokumen" value="{{ $data->tanggal_kejadian }}" readonly />
+            <input type="text" class="form-control" name="" value="{{ $data->tanggal_kejadian }}" readonly />
             </div>
               <label class="col-sm-6 col-form-label my-2"
             >Tempat Kejadian</label
             >
             <div class="col-sm-6 my-2">
-            <input type="text" class="form-control" name="no_dokumen" value="{{ $data->tempat_Kejadian }}" readonly />
+            <input type="text" class="form-control" name="" value="{{ $data->tempat_Kejadian }}" readonly />
             </div>
         </div>
         </div>
@@ -290,21 +290,21 @@
         <div class="mb-3 row">
             <label class="col-sm-4 col-form-label my-2">Keterangan Saksi</label>
             <div class="col-sm-6">
-            <input type="file" class="form-control my-2" name="rekap_data" value="" readonly />
+            <input type="file" class="form-control my-2" name="" value="" readonly />
             </div>
             <div class="col-sm-1 my-2">
                 <button class="btn btn-secondary"><i class="fas fa-download"></i></button>
             </div>
             <label class="col-sm-4 col-form-label my-2">Bukti Dokumen Surat</label>
             <div class="col-sm-6">
-            <input type="file" class="form-control my-2" name="bukti_dokumen" value="" readonly />
+            <input type="file" class="form-control my-2" name="" value="" readonly />
             </div>
             <div class="col-sm-1 my-2">
                 <button class="btn btn-secondary"><i class="fas fa-download"></i></button>
             </div>
             <label class="col-sm-4 col-form-label my-2">Keterangan Pelaku</label>
             <div class="col-sm-6">
-            <input type="file" class="form-control my-2" name="perjanjian" value="" readonly />
+            <input type="file" class="form-control my-2" name="" value="" readonly />
             </div>
             <div class="col-sm-1 my-2">
                 <button class="btn btn-secondary"><i class="fas fa-download"></i></button>
@@ -313,7 +313,7 @@
             >Lain - Lain</label
             >
             <div class="col-sm-6">
-            <input type="file" class="form-control my-2" name="bukti_penagihan" value="" readonly />
+            <input type="file" class="form-control my-2" name="" value="" readonly />
             </div>
             <div class="col-sm-1 my-2">
                 <button class="btn btn-secondary"><i class="fas fa-download"></i></button>
@@ -329,7 +329,7 @@
                 </select>
             </div>
             <div class="col-sm-6 my-2">
-                <input type="text" class="form-control" name="alasan_dokumen" placeholder="Reason if Rejected"/>
+                <input type="text" class="form-control" name="" placeholder="Reason if Rejected"/>
             </div>
             <div class="col-sm-4 my-2">
                 <select name="status_bukti_dokumen_surat" id="" class="form-control">
@@ -338,16 +338,16 @@
                 </select>
             </div>
             <div class="col-sm-6 my-2">
-                <input type="text" class="form-control" name="status_keterangan_pelaku" placeholder="Reason if Rejected"/>
+                <input type="text" class="form-control" name="" placeholder="Reason if Rejected"/>
             </div>
             <div class="col-sm-4 my-2">
-                <select name="status_bukti_2" id="" class="form-control">
+                <select name="status_keterangan_pelaku" id="" class="form-control">
                     <option value="APPROVE">APPROVE</option>
                     <option value="REJECT">REJECT</option>
                 </select>
             </div>
             <div class="col-sm-6 my-2">
-                <input type="text" class="form-control" name="alasan_bukti_2" placeholder="Reason if Rejected"/>
+                <input type="text" class="form-control" name="" placeholder="Reason if Rejected"/>
             </div>
             <div class="col-sm-4 my-2">
                 <select name="status_lain_lain" id="" class="form-control">
@@ -356,7 +356,7 @@
                 </select>
             </div>
             <div class="col-sm-6 my-2">
-                <input type="text" class="form-control" name="alasan_bukti_3" placeholder="Reason if Rejected"/>
+                <input type="text" class="form-control" name="" placeholder="Reason if Rejected"/>
             </div>
         </div>
         </div>
@@ -366,7 +366,7 @@
             <div class="mb-3 row">
                 <label class="col-sm-4 col-form-label my-2">Barang Bukti</label>
                 <div class="col-sm-6">
-                    <input type="file" class="form-control my-2" name="disposisi" value="" readonly />
+                    <input type="file" class="form-control my-2" name="" value="" readonly />
                 </div>
                 <div class="col-sm-1 my-2">
                     <button class="btn btn-secondary"><i class="fas fa-download"></i></button>
@@ -375,7 +375,7 @@
                 >Kelengkapan Dokumen</label
                 >
                 <div class="col-sm-6">
-                    <input type="file" class="form-control my-2" name="dokumen_lainnya" value="" readonly />
+                    <input type="file" class="form-control my-2" name="" value="" readonly />
                 </div>
                 <div class="col-sm-1 my-2">
                     <button class="btn btn-secondary"><i class="fas fa-download"></i></button>
@@ -385,7 +385,7 @@
                 >Kronologis Lengkap</label
                 >
                 <div class="col-sm-6">
-                    <input type="file" class="form-control my-2" name="dokumen_lainnya" value="" readonly />
+                    <input type="file" class="form-control my-2" name="" value="" readonly />
                 </div>
                 <div class="col-sm-1 my-2">
                     <button class="btn btn-secondary"><i class="fas fa-download"></i></button>
@@ -401,7 +401,7 @@
                     </select>
                 </div>
                 <div class="col-sm-6 my-2">
-                    <input type="text" class="form-control" name="alasan_disposisi" placeholder="Reason if Rejected"/>
+                    <input type="text" class="form-control" name="" placeholder="Reason if Rejected"/>
                 </div>
                 <div class="col-sm-4 my-2">
                     <select name="status_dokumentasi_investigasi" id="" class="form-control">
@@ -410,7 +410,7 @@
                     </select>
                 </div>
                 <div class="col-sm-6 my-2">
-                    <input type="text" class="form-control" name="alasan_dokumen_lainnya" placeholder="Reason if Rejected"/>
+                    <input type="text" class="form-control" name="" placeholder="Reason if Rejected"/>
                 </div>
                  <div class="col-sm-4 my-2">
                     <select name="status_kronologis_lengkap" id="" class="form-control">
@@ -419,7 +419,7 @@
                     </select>
                 </div>
                 <div class="col-sm-6 my-2">
-                    <input type="text" class="form-control" name="alasan_dokumen_lainnya" placeholder="Reason if Rejected"/>
+                    <input type="text" class="form-control" name="" placeholder="Reason if Rejected"/>
                 </div>
                 
             </div>
@@ -445,7 +445,8 @@
         </div>
         <div class="d-flex justify-content-end mb-5">
             <div class="col-lg-3">
-                <button class="btn btn-danger">Return</button>
+            
+                <button class="btn btn-danger" type="submit">Return</button>
                 <button class="btn btn-primary">Process</button>
             </div>
         </div>
