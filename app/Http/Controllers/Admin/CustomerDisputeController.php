@@ -38,7 +38,7 @@ class CustomerDisputeController extends Controller
 
                 ->rawColumns(['action'])
                 ->make();
-                ;
+                
         }
 
         return view('admin.customer_dispute');
