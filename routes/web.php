@@ -67,6 +67,7 @@ Route::get('/admin/dashboard/customer-dispute/detail/{id}',[AdminCustomerDispute
 
 Route::get('/admin/dashboard/fraud',[AdminFraudController::class,'index']);
 Route::get('/admin/dashboard/fraud/detail/{id}',[AdminFraudController::class,'show'])->name('fraud-detail');
+Route::post('/admin/dashboard/fraud/approval/{no_kasus}',[AdminFraudController::class,'return']);
 
 
 Route::get('/admin/dashboard/outstanding',[AdminOutstandingController::class,'index']);

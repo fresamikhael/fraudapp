@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\FraudModel;
+use App\Models\StatusFraudApprovalModel;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
@@ -95,9 +96,10 @@ class FraudController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
+  
     /**
      * Update the specified resource in storage.
      *
@@ -107,7 +109,19 @@ class FraudController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+            
+    }
+
+     public function return(Request $request,$no_kasus)
+    {
+   
+
+    $data = $request->except(['_token']);
+    $status=  StatusFraudApprovalModel::where('no_kasus',$no_kasus);
+    $status->update($data);
+
+    return('Update berhasil');
+    
     }
 
     /**

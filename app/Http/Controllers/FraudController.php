@@ -73,6 +73,7 @@ class FraudController extends Controller
         
     $data = $request->all();
     $status_data = $data['no_kasus'];
+    $status_tanggal = $data['tanggal'];
     //  $data = $request->validate(['no_kasus'=>'required|string',]
 
     //  );
@@ -96,7 +97,7 @@ class FraudController extends Controller
 
 
         FraudModel::create($data);
-        StatusFraudApprovalModel::create(['no_kasus'=>$status_data]);
+        StatusFraudApprovalModel::create(['no_kasus'=>$status_data,'tanggal'=>$status_tanggal]);
        return view('pages.user.litigation.index');
 
     }

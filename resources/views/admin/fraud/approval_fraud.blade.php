@@ -272,7 +272,7 @@
         <p>Kronologis Singkat Kejadian :</p>
         <div id="editor">
             <textarea
-            name="kronologi"
+            
             id="editor">
             <p>
                   {{ $data->kronologi }}
