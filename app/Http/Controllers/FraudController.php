@@ -96,7 +96,7 @@ class FraudController extends Controller
 
 
         FraudModel::create($data);
-        StatusFraudApprovalModel::create(['status_no_kasus'=>$status_data]);
+        StatusFraudApprovalModel::create(['no_kasus'=>$status_data]);
        return view('pages.user.litigation.index');
 
     }
