@@ -150,174 +150,305 @@
             <h1>Fraud</h1>
           </div>
         </div>
-        <div class="d-flex justify-content-between">
-          <div class="col-lg-6">
-            <div class="row">
-              <label class="col-sm-4 col-form-label my-2">Nomor Kasus</label>
-              <div class="col-sm-7 my-2">
-                <input type="text" class="form-control" name="no_kasus" value="{{ $data->no_kasus}}" readonly/>
-              </div>
-              <label class="col-sm-4 col-form-label my-2">Tanggal</label>
-              <div class="col-sm-7 my-2">
-                <input type="text" class="form-control" name="tanggal" value="{{ $data->tanggal }}" readonly/>
-              </div>
+    <div class="d-flex justify-content-between">
+        <div class="col-lg-6">
+        <div class="row">
+            <label class="col-sm-6 col-form-label my-2">Nomor Kasus</label>
+            <div class="col-sm-6 my-2">
+            <input type="text" class="form-control" name="no_kasus" value="{{ $data->no_kasus }}" readonly />
             </div>
-            <div class="row">
-              <label class="col-sm-4 col-form-label my-2"
-                >Faktor Penyebab</label
-              >
-              <div class="col-sm-7 my-2">
-             <input type="text" class="form-control" name="tanggal" value="{{ $data->faktor_penyebab }}" readonly/>
-                 {{-- <select class="form-select" aria-label="Default select example" name="faktor_penyebab">
-  <option selected></option>
-  <option value="Keserakahan">Keserakahan</option>
-  <option value="Kesempatan">Kesempatan</option>
-  <option value="Kebutuhab">Kebutuhan</option>
-  <option value="Tekanan">Tekanan</option>
-  <option value="Pembenaran">Pembenaran</option>
-</select> --}}
-              </div>
+            <label class="col-sm-6 col-form-label my-2">Tanggal</label>
+            <div class="col-sm-6 my-2">
+            <input type="text" class="form-control" name="tanggal" value="{{ $data->tanggal }}" readonly />
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="mb-3 row">
-              <label class="col-sm-5 col-form-label my-2">Pelaku</label>
-              <div class="col-sm-7 my-2">
-
-                     {{-- <select class="form-select" aria-label="Default select example" name="pelaku">
-  <option selected></option>
-  <option value="Internal">Internal</option>
-  <option value="Eksternal">Eksternal</option>
-                     </select> --}}
-                      <input type="text" class="form-control" name="tanggal" value="{{ $data->pelaku }}" readonly/>
-              </div>
-              <label class="col-sm-5 col-form-label my-2"
-                >Unit/Departemen/Divisi</label
-              >
-              <div class="col-sm-7 my-2">
-                <input type="text" class="form-control" name="departemen" value="{{ $data->departemen }}" readonly/>
-              </div>
-              <label class="col-sm-5 col-form-label my-2">Total Kerugian</label>
-              <div class="col-sm-7 my-2">
-                <input type="text" class="form-control" name="total_kerugian" value="{{ $data->total_kerugian }}" readonly />
-              </div>
-              <label class="col-sm-5 col-form-label my-2"
-                >Tanggal Kejadian</label
-              >
-              <div class="col-sm-7 my-2">
-                <input type="text" class="form-control" name="tanggal_kejadian" value="{{  date('d-M-Y',strtotime($data->tanggal_kejadian)); }}" readonly/>
-              </div>
-              <label class="col-sm-5 col-form-label my-2"
-                >Tempat Kejadian</label
-              >
-              <div class="col-sm-7 my-2">
-                <input type="text" class="form-control" name="tempat_kejadian" value="{{ $data->tempat_Kejadian }}" readonly/>
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="d-flex justify-content-center mt-1">
-          <div class="col-lg-12">
-            <p>Kronologis Singkat Kejadian :</p>
+        <div class="row">
+            <label class="col-sm-6 col-form-label my-2"
+            >Jenis Kasus</label
+            >
+            <div class="col-sm-6 my-2">
+            <input type="text" class="form-control" name="nama_pihak" value="{{ $data->jenis_kasus }}" readonly />
+            </div>
+            <label class="col-sm-6 col-form-label my-2"
+            >Faktor Penyebab</label
+            >
+            <div class="col-sm-6 my-2">
+            <input type="text" class="form-control" name="unit" value="{{ $data->faktor_penyebab }}" readonly />
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-sm-6 col-form-label my-2"
+            >Pelaku</label
+            >
+            <div class="col-sm-6 my-2">
+            <input type="text" class="form-control" name="nilai_kerugian" value="{{ $data->pelaku }}" readonly />
+            </div>
+            <label class="col-sm-6 col-form-label my-2"
+            >Unit/Departemen/Divisi</label
+            >
+            <div class="col-sm-6 my-2">
+            <input type="text" class="form-control" name="no_dokumen" value="{{ $data->departemen }}" readonly />
+            </div>
+            <label class="col-sm-6 col-form-label my-2"
+            >Total Kerugian</label
+            >
+            <div class="col-sm-6 my-2">
+            <input type="text" class="form-control" name="no_dokumen" value="{{ $data->total_kerugian }}" readonly />
+            </div>
+            <label class="col-sm-6 col-form-label my-2"
+            >Tanggal Kejadian</label
+            >
+            <div class="col-sm-6 my-2">
+            <input type="text" class="form-control" name="no_dokumen" value="{{ $data->tanggal_kejadian }}" readonly />
+            </div>
+              <label class="col-sm-6 col-form-label my-2"
+            >Tempat Kejadian</label
+            >
+            <div class="col-sm-6 my-2">
+            <input type="text" class="form-control" name="no_dokumen" value="{{ $data->tempat_Kejadian }}" readonly />
+            </div>
+        </div>
+        </div>
+        <div class="ms-3 col-lg-6">
+            <div class="row">
+                <div class="col-sm-12 my-2">
+                    <select name="status_no_kasus" id="" class="form-control">
+                        <option value="APPROVE">APPROVE</option>
+                        <option value="REJECT">REJECT</option>
+                    </select>
+                </div>
+                <div class="col-sm-12 my-2">
+                    <select name="status_tanggal" id="" class="form-control">
+                        <option value="APPROVE">APPROVE</option>
+                        <option value="REJECT">REJECT</option>
+                    </select>
+                </div>
+                <div class="col-sm-12 my-2">
+                    <select name="status_nama_pihak" id="" class="form-control">
+                        <option value="APPROVE">APPROVE</option>
+                        <option value="REJECT">REJECT</option>
+                    </select>                </div>
+                <div class="col-sm-12 my-2">
+                    <select name="status_unit" id="" class="form-control">
+                        <option value="APPROVE">APPROVE</option>
+                        <option value="REJECT">REJECT</option>
+                    </select>
+                </div>
+                <div class="col-sm-12 my-2">
+                    <select name="status_no_dokumen" id="" class="form-control">
+                        <option value="APPROVE">APPROVE</option>
+                        <option value="REJECT">REJECT</option>
+                    </select>
+                </div>
+                <div class="col-sm-12 my-2">
+                    <select name="status_nilai_kerugian" id="" class="form-control">
+                        <option value="APPROVE">APPROVE</option>
+                        <option value="REJECT">REJECT</option>
+                    </select>
+                </div>
+                  <div class="col-sm-12 my-2">
+                    <select name="status_nilai_kerugian" id="" class="form-control">
+                        <option value="APPROVE">APPROVE</option>
+                        <option value="REJECT">REJECT</option>
+                    </select>
+                </div>
+                  <div class="col-sm-12 my-2">
+                    <select name="status_nilai_kerugian" id="" class="form-control">
+                        <option value="APPROVE">APPROVE</option>
+                        <option value="REJECT">REJECT</option>
+                    </select>
+                </div>
+                  <div class="col-sm-12 my-2">
+                    <select name="status_nilai_kerugian" id="" class="form-control">
+                        <option value="APPROVE">APPROVE</option>
+                        <option value="REJECT">REJECT</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center mt-5">
+        <div class="col-lg-12">
+        <p>Kronologis Singkat Kejadian :</p>
+        <div id="editor">
             <textarea
-
-            name="kronologis_lengkap"
+            name="kronologi"
             id="editor">
-              <p>
-                  {{ $data->kronologis_lengkap }}
+            <p>
+                  {{ $data->kronologi }}
               </p>
             </textarea>
-          </div>
         </div>
-        <div class="d-flex justify-content-start mt-2">
-          <div class="col-lg-12">
-            <div class="mb-3 row">
-              <label class="col-sm-2 col-form-label my-2"
-                >Klasifikasi Fraud</label
-              >
-              <div class="col-sm-5">
-                <input type="text" class="form-control my-2" name="klasifikasi_kasus" readonly value="{{ $data->klasifikasi_kasus }}"/>
-              </div>
+        </div>
+    </div>
+    
+    <div class="d-flex justify-content-start mt-4">
+        <div class="col-sm-2 my-2">
+        <label for="">Alat Bukti</label>
+        </div>
+        <div class="col-lg-6">
+        <div class="mb-3 row">
+            <label class="col-sm-4 col-form-label my-2">Keterangan Saksi</label>
+            <div class="col-sm-6">
+            <input type="file" class="form-control my-2" name="rekap_data" value="" readonly />
             </div>
-          </div>
+            <div class="col-sm-1 my-2">
+                <button class="btn btn-secondary"><i class="fas fa-download"></i></button>
+            </div>
+            <label class="col-sm-4 col-form-label my-2">Bukti Dokumen Surat</label>
+            <div class="col-sm-6">
+            <input type="file" class="form-control my-2" name="bukti_dokumen" value="" readonly />
+            </div>
+            <div class="col-sm-1 my-2">
+                <button class="btn btn-secondary"><i class="fas fa-download"></i></button>
+            </div>
+            <label class="col-sm-4 col-form-label my-2">Keterangan Pelaku</label>
+            <div class="col-sm-6">
+            <input type="file" class="form-control my-2" name="perjanjian" value="" readonly />
+            </div>
+            <div class="col-sm-1 my-2">
+                <button class="btn btn-secondary"><i class="fas fa-download"></i></button>
+            </div>
+            <label class="col-sm-4 col-form-label my-2"
+            >Lain - Lain</label
+            >
+            <div class="col-sm-6">
+            <input type="file" class="form-control my-2" name="bukti_penagihan" value="" readonly />
+            </div>
+            <div class="col-sm-1 my-2">
+                <button class="btn btn-secondary"><i class="fas fa-download"></i></button>
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-4">
+        <div class="mb-3 row">
+            <div class="col-sm-4 my-2">
+                <select name="status_dokumen" id="" class="form-control">
+                    <option value="APPROVE">APPROVE</option>
+                    <option value="REJECT">REJECT</option>
+                </select>
+            </div>
+            <div class="col-sm-6 my-2">
+                <input type="text" class="form-control" name="alasan_dokumen" placeholder="Reason if Rejected"/>
+            </div>
+            <div class="col-sm-4 my-2">
+                <select name="status_bukti_1" id="" class="form-control">
+                    <option value="APPROVE">APPROVE</option>
+                    <option value="REJECT">REJECT</option>
+                </select>
+            </div>
+            <div class="col-sm-6 my-2">
+                <input type="text" class="form-control" name="alasan_bukti_1" placeholder="Reason if Rejected"/>
+            </div>
+            <div class="col-sm-4 my-2">
+                <select name="status_bukti_2" id="" class="form-control">
+                    <option value="APPROVE">APPROVE</option>
+                    <option value="REJECT">REJECT</option>
+                </select>
+            </div>
+            <div class="col-sm-6 my-2">
+                <input type="text" class="form-control" name="alasan_bukti_2" placeholder="Reason if Rejected"/>
+            </div>
+            <div class="col-sm-4 my-2">
+                <select name="status_bukti_3" id="" class="form-control">
+                    <option value="APPROVE">APPROVE</option>
+                    <option value="REJECT">REJECT</option>
+                </select>
+            </div>
+            <div class="col-sm-6 my-2">
+                <input type="text" class="form-control" name="alasan_bukti_3" placeholder="Reason if Rejected"/>
+            </div>
+        </div>
+        </div>
+    </div>
+        <div class="d-flex justify-content-start">
+            <div class="col-lg-6">
+            <div class="mb-3 row">
+                <label class="col-sm-4 col-form-label my-2">Barang Bukti</label>
+                <div class="col-sm-6">
+                    <input type="file" class="form-control my-2" name="disposisi" value="" readonly />
+                </div>
+                <div class="col-sm-1 my-2">
+                    <button class="btn btn-secondary"><i class="fas fa-download"></i></button>
+                </div>
+                <label class="col-sm-4 col-form-label my-2"
+                >Kelengkapan Dokumen</label
+                >
+                <div class="col-sm-6">
+                    <input type="file" class="form-control my-2" name="dokumen_lainnya" value="" readonly />
+                </div>
+                <div class="col-sm-1 my-2">
+                    <button class="btn btn-secondary"><i class="fas fa-download"></i></button>
+                </div>
+
+                 <label class="col-sm-4 col-form-label my-2"
+                >Kronologis Lengkap</label
+                >
+                <div class="col-sm-6">
+                    <input type="file" class="form-control my-2" name="dokumen_lainnya" value="" readonly />
+                </div>
+                <div class="col-sm-1 my-2">
+                    <button class="btn btn-secondary"><i class="fas fa-download"></i></button>
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-6">
+            <div class="mb-3 row">
+                <div class="col-sm-4 my-2">
+                    <select name="status_disposisi" id="" class="form-control">
+                        <option APPROVE">APPROVE</option>
+                        <option value="REJECT">REJECT</option>
+                    </select>
+                </div>
+                <div class="col-sm-6 my-2">
+                    <input type="text" class="form-control" name="alasan_disposisi" placeholder="Reason if Rejected"/>
+                </div>
+                <div class="col-sm-4 my-2">
+                    <select name="status_dokumen_lainnya" id="" class="form-control">
+                        <option value="APPROVE">APPROVE</option>
+                        <option value="REJECT">REJECT</option>
+                    </select>
+                </div>
+                <div class="col-sm-6 my-2">
+                    <input type="text" class="form-control" name="alasan_dokumen_lainnya" placeholder="Reason if Rejected"/>
+                </div>
+                 <div class="col-sm-4 my-2">
+                    <select name="status_dokumen_lainnya" id="" class="form-control">
+                        <option value="APPROVE">APPROVE</option>
+                        <option value="REJECT">REJECT</option>
+                    </select>
+                </div>
+                <div class="col-sm-6 my-2">
+                    <input type="text" class="form-control" name="alasan_dokumen_lainnya" placeholder="Reason if Rejected"/>
+                </div>
+                
+            </div>
+            </div>
         </div>
         <div class="d-flex justify-content-start">
-          <div class="col-sm-2 my-2">
-            <label for="">Alat Bukti</label>
-          </div>
-          <div class="col-lg-6">
+            <div class="col-lg-6">
             <div class="mb-3 row">
-              <label class="col-sm-4 col-form-label my-2"> Saksi 1</label>
-              <div class="col-sm-7">
-                <input type="text" class="form-control my-2" name="saksi_1" readonly value="{{ $data->saksi_1 }}"/>
-              </div>
-              <label class="col-sm-4 col-form-label my-2">
-                Departemen/Unit</label
-              >
-              <div class="col-sm-7">
-                <input type="text" class="form-control my-2" name="departemen_saksi_1"  readonly value="{{ $data->departemen_saksi_1 }}"/>
-              </div>
-              <label class="col-sm-4 col-form-label my-2"> Saksi 2</label>
-              <div class="col-sm-7">
-                <input type="text" class="form-control my-2" name="saksi_2" readonly value="{{ $data->saksi_2 }}" />
-              </div>
-              <label class="col-sm-4 col-form-label my-2">
-                Departemen/Unit</label
-              >
-              <div class="col-sm-7">
-                <input type="text" class="form-control my-2" name="departemen_saksi_2" readonly value="{{ $data->departemen_saksi_2 }}"/>
-              </div>
-              <label class="col-sm-4 col-form-label my-2"
-                >Bukti Dokumen Surat</label
-              >
-              <div class="col-sm-7">
-                <input type="file" class="form-control my-2" name="bukti_dokumen_surat" readonly value="{{ $data->bukti_dokumen_surat}}"/>
-              </div>
-              <label class="col-sm-4 col-form-label my-2"
-                >Keterangan Pelaku</label
-              >
-              <div class="col-sm-7">
-                <input type="file" class="form-control my-2" name="keterangan_pelaku" readonly value="{{ $data->keterangan_pelaku }}"/>
-              </div>
-              <label class="col-sm-4 col-form-label my-2"
-                >Keterangan Saksi</label
-              >
-              <div class="col-sm-7">
-                <input type="file" class="form-control my-2" name="keterangan_saksi" readonly value="{{ $data->keterangan_saksi }}" />
-              </div>
-              <label class="col-sm-4 col-form-label my-2">Lain-lain</label>
-              <div class="col-sm-7">
-                <input type="file" class="form-control my-2" name="lain_lain" readonly value="{{ $data->lain_lain }}"/>
-              </div>
+                <label class="col-sm-4 col-form-label my-2">Regulation</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control my-2" name="regulasi" />
+                </div>
+                <label class="col-sm-4 col-form-label my-2"
+                >Suggestion</label
+                >
+                <div class="col-sm-7">
+                    <input type="text" class="form-control my-2" name="sugesti"/>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="d-flex justify-content-start">
-          <div class="col-lg-6">
-            <div class="mb-3 row">
-              <label class="col-sm-5 col-form-label my-2"
-                >Dokumentasi Barang Bukti</label
-              >
-              <div class="col-sm-7">
-                <input type="file" class="form-control my-2" name="dokumentasi_barang_bukti" readonly value="{{ $data->dokumentasi_barang_bukti }}"/>
-              </div>
-              <label class="col-sm-5 col-form-label my-2"
-                >Dokumen Investigasi</label
-              >
-              <div class="col-sm-7">
-                <input type="file" class="form-control my-2" name="dokumentasi_investigasi" readonly value="{{ $data->dokumentasi_investigasi}}"/>
-              </div>
-              <label class="col-sm-5 col-form-label my-2">Bukti Lainnya</label>
-              <div class="col-sm-7">
-                <input type="file" class="form-control my-2" name="bukti_lainya" readonly value="{{ $data->bukti_lainya}}"/>
-              </div>
             </div>
-          </div>
+            <div class="col-lg-6">
+            </div>
         </div>
-        {{-- <div class="d-flex justify-content-end mb-5">
-          <div class="col-lg-3">
-            <button class="btn btn-danger">Input</button>
-          </div> --}}
+        <div class="d-flex justify-content-end mb-5">
+            <div class="col-lg-3">
+                <button class="btn btn-danger">Return</button>
+                <button class="btn btn-primary">Process</button>
+            </div>
+        </div>
         </div>
       </div>
     </form>
@@ -335,6 +466,7 @@
     <script>
       CKEDITOR.replace("editor");
     </script>
+    <script src="https://kit.fontawesome.com/e20e84f3eb.js" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
