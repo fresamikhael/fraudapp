@@ -72,7 +72,9 @@ class CustomerDisputeController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = CustomerDisputeModel::with('user')->where('no_kasus',$id)->firstOrFail();
+
+        return $data;
     }
 
     /**
