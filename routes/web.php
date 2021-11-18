@@ -63,10 +63,12 @@ Route::post('/register', [RegisterController::class,'register']);
 Route::get('/admin/dashboard',[AdminController::class,'index']);
 
 Route::get('/admin/dashboard/customer-dispute',[AdminCustomerDisputeController::class,'index']);
-Route::get('/admin/dashboard/customer-dispute/detail/{id}',[AdminFraudController::class,'show'])->name('customer-dispute-detail');
+Route::get('/admin/dashboard/customer-dispute/detail/{id}',[AdminCustomerDisputeController::class,'show'])->name('customer-dispute-detail');
 
 Route::get('/admin/dashboard/fraud',[AdminFraudController::class,'index']);
 Route::get('/admin/dashboard/fraud/detail/{id}',[AdminFraudController::class,'show'])->name('fraud-detail');
+Route::post('/admin/dashboard/fraud/approval/{no_kasus}',[AdminFraudController::class,'return']);
+
 
 Route::get('/admin/dashboard/outstanding',[AdminOutstandingController::class,'index']);
 Route::get('/admin/dashboard/outstanding/detail/{id}',[AdminOutstandingController::class,'show'])->name('outstanding-detail');

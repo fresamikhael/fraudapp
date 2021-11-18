@@ -37,4 +37,8 @@ class FraudModel extends Model
     public function user(){
         return $this->belongsTo(User::class,'user_id','id');
     }
+
+     public function status(){
+        return $this->hasOne(StatusFraudApprovalModel::class,'no_kasus','no_kasus');
+    }
 }

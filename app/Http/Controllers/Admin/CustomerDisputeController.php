@@ -38,9 +38,10 @@ class CustomerDisputeController extends Controller
 
                 ->rawColumns(['action'])
                 ->make();
+                
         }
 
-        return view('admin.customer_dispute');
+        return view('admin.customer_dispute.customer_dispute');
     }
 
     /**
@@ -72,7 +73,9 @@ class CustomerDisputeController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = CustomerDisputeModel::with('user')->where('no_kasus',$id)->firstOrFail();
+
+        return $data;
     }
 
     /**

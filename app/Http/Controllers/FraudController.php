@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\FraudRequest;
 use App\Models\FraudModel;
+use App\Models\StatusFraudApprovalModel;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -68,7 +69,11 @@ class FraudController extends Controller
      */
     public function store(FraudRequest $request)
     {
+
+        
     $data = $request->all();
+    $status_data = $data['no_kasus'];
+    $status_tanggal = $data['tanggal'];
     //  $data = $request->validate(['no_kasus'=>'required|string',]
 
     //  );
@@ -92,6 +97,7 @@ class FraudController extends Controller
 
 
         FraudModel::create($data);
+        StatusFraudApprovalModel::create(['no_kasus'=>$status_data,'tanggal'=>$status_tanggal]);
        return view('pages.user.litigation.index');
 
     }
